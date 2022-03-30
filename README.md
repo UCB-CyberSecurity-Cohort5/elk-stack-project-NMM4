@@ -1,4 +1,2 @@
 # ELK-Stack-Project
-Project 1 - ELK Stack Project
-
-## Fill in this as your project documentation
+https://github.com/UCB-CyberSecurity-Cohort5/elk-stack-project-NMM4/blob/main/playbook/filebeat-playbook.yml.png
