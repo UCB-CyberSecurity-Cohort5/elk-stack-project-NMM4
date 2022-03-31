@@ -94,7 +94,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - _What kind of data does each beat collect?_
 - _Filebeat collects log information about the file system and specifies which files have been changed. If changes in files have been detected, they are send to elasticsearch. The output can be analyzed via Kibana. 
-- _Metricbeat visualizes data on every process that is currently running on your system, including memory, CPU, file syste, and more. To do this via Kibana, ensure that your VM is running, navigate to Kibana and select the system you'd like to investigate. 
+- _Metricbeat visualizes data on every process that is currently running on your system, including memory, CPU, file syste, and more. To do this via Kibana, ensure that your VM is running, navigate to Kibana and select the system you'd like to investigate._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -115,5 +115,14 @@ SSH into the control node and follow the steps below:
 - _Which URL do you navigate to in order to check that the ELK server is running?_
 http://20.25.100.30:5601/app/kibana#
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+_**Bonus*: Provide the specific commands the user will need to run to download the playbook, update the files, etc._
+1. <nano filebeat-config.yml>
+   scroll down to IP and user name to change the IP address to my Elk server: 10.1.0.6:9200, 
+   scroll further down to line 1806 to modify the IP address to reflect the Elk Server IP address, save and exit. 
+   run <ansible-playbook /etc/ansible/roles/filebeat-playbook.yml>
+   If output contains "ok" messages and no errors, filebeat has been successfully downloaded. 
+2. <nano metricbeat-playbook.yml>
+   modify the yaml file to include the correct location of the metricbeat-config.yml and metricbeat.yml files, save and exit.
+   run <ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml>
+   If output contains "ok" messages and no errors, metricbeat has been successfully downloaded. 
 
