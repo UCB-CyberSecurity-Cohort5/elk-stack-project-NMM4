@@ -23,10 +23,11 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
+- _What aspect of security do load balancers protect?_
 - _Load Balancers protects organizations against distributed DDoS (denial-of-service) attacks by utilizing the offloading function, allowing you to distribute network traffic evenly to prevent failure that's caused by overloading a particular resource._ 
 
+_What is the advantage of a jump box?_
 - _The advantage of a jump box is that it can restrict access of your virtual network to the public. An individual would need the private IP addresses of the machines to access the other virtual machines and this is how a jumpbox can control access._
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system traffic.
