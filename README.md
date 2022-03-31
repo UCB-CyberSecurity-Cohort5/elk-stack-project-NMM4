@@ -36,8 +36,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - _Metricbeat collects metric from the operating system and from services running on the server and sends them to elasticsearch, which can visualize the data.  
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
-
 | Name                   | Function       | IP Address | Operating System |
 |------------------------|----------------|------------|------------------|
 | Jump-Box-Provisioner   | Gateway        | 10.0.0.4   | Linux            |
@@ -68,17 +66,14 @@ A summary of the access policies in place can be found in the table below.
 | ELK-SERVER    | Yes, Port 5601      | 13.64.49.179         |  
 
 ### Elk Configuration
-
+-_What is the main advantage of automating configuration with Ansible?_
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it minimizes configuration errors.
-- _TODO: What is the main advantage of automating configuration with Ansible?_
-answered above.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- First, install docker.io to the remote server
-- Second, install python3_pip
-- Third, since Elk required more memory, increased the virtual memory
-- Fourth, download and launch the Elk container, which downloads the Elk docker container 
+- _First, install docker.io to the remote server_
+- _Second, install python3_pip_
+- _Third, since Elk required more memory, increased the virtual memory_
+- _Fourth, download and launch the Elk container, which downloads the Elk docker container_
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
